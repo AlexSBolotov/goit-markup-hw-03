@@ -1,0 +1,167 @@
+/* основний фоновий колір #FFFFFF */
+/* доп фоновий колій #2E2F42 */
+/* фон блока команді #F4F4FD */
+/* цвет основного текста (заголовки) #2E2F42 */
+/* цвет параграфов, адреса #434455 */
+/* цвет части логотипа #4D5AE5 */
+/* цвет части логотпа внизу #F4F4FD */
+/* цвет первого заголовка #FFFFFF */
+/* цвет блока текста в подвале #E7E9FC */
+
+:root {
+  --main-text-color: #2e2f42;
+  --paragraph-text-color: #434455;
+  --accent-color: #404bbf;
+  --accent-color-add: #4d5ae5;
+  --white-color: #ffffff;
+  --not-white-color: #f4f4fd;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.02em;
+  background-color: var(--white-color);
+  color: var(--main-text-color);
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.list {
+  list-style: none;
+}
+
+/* !!Header!! */
+/* Logo */
+.logo-head {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo-head-part {
+  color: var(--accent-color-add);
+}
+/* Site navigation */
+.main-nav .link:hover,
+.main-nav .link:focus {
+  color: var(--accent-color);
+}
+.main-nav .link.current {
+  color: var(--accent-color);
+}
+/* adress */
+.adress-list {
+  color: var(--paragraph-text-color);
+  text-decoration: none;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.adress-list.mail:hover,
+.adress-list.tel:hover,
+.adress-list.mail:focus,
+.adress-list.tel:focus {
+  color: var(--accent-color);
+}
+
+/* !!Hero!! */
+.hero {
+  background-color: #2e2f42;
+}
+.hero-title {
+  color: var(--white-color);
+  font-size: 56px;
+  line-height: 107%;
+  text-align: center;
+}
+.hero-button {
+  background-color: var(--accent-color-add);
+  color: var(--white-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.hero-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* !!Section!! */
+.section-title {
+  font-size: 36px;
+  line-height: 111%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.section-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.section-text {
+  color: var(--paragraph-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* OurTeam */
+.team {
+  background-color: var(--not-white-color);
+}
+/* !!Footer!! */
+.footer {
+  background-color: #2e2f42;
+}
+.logo-foot {
+  color: var(--not-white-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 117%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo-foot-part {
+  color: var(--accent-color-add);
+}
+.footer-text {
+  color: #e7e9fc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* !!!Portfolio Page!!! */
+/* !!Portfolio section!! */
+/* Filter buttons */
+
+.button-filter {
+  color: var(--accent-color-add);
+  background-color: var(--not-white-color);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--accent-color-add);
+  color: var(--white-color);
+}
+.button-filter.current {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
