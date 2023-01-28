@@ -15,28 +15,62 @@
   --accent-color-add: #4d5ae5;
   --white-color: #ffffff;
   --not-white-color: #f4f4fd;
+  --additional-not-white-color: #e7e9fc;
+  --hero-footer-bgc: #2e2f42;
 }
+/* html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} - exist in modern-normalize */
 
 body {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.02em;
   background-color: var(--white-color);
   color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .link {
-  text-decoration: none;
   color: currentColor;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  text-decoration: none;
 }
 .list {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
+}
+.button {
+  border-radius: 4px;
+  border: 0px;
+  /* font-family: inherit; - exist in modern-normalize */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 1px solid #434455; - temporary container border */
 }
 
 /* !!Header!! */
 /* Logo */
+.page-header {
+  background-color: var(--white-color);
+  border-top: 1px solid var(--additional-not-white-color);
+}
+
 .logo-head {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -74,53 +108,89 @@ body {
 
 /* !!Hero!! */
 .hero {
-  background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  background-color: var(--hero-footer-bgc);
+  text-align: center;
 }
 .hero-title {
+  margin-top: 0px;
+  margin-bottom: 48px;
   color: var(--white-color);
   font-size: 56px;
   line-height: 107%;
-  text-align: center;
 }
-.hero-button {
+.hero .button {
+  padding: 16px 32px;
+  min-width: 169px;
   background-color: var(--accent-color-add);
   color: var(--white-color);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
 }
-.hero-button:hover {
+.hero .button:hover {
   background-color: var(--accent-color);
 }
 
 /* !!Section!! */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .section-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 36px;
   line-height: 111%;
   text-align: center;
   text-transform: capitalize;
 }
 .section-subtitle {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
 .section-text {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--paragraph-text-color);
   font-size: 16px;
   line-height: 1.5;
 }
 
+/* Features */
+.section.features {
+  background-color: var(--white-color);
+}
+/* Невидимий заголовок - Сховати по-людські! */
+.section-title.features {
+  margin-bottom: 40px;
+  display: none;
+}
+
+/* We are We Doing */
+.section.projects {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: var(--white-color);
+}
+.section-title.projects {
+  margin-bottom: 72px;
+}
 /* OurTeam */
-.team {
+.section.team {
   background-color: var(--not-white-color);
 }
+.card-content {
+  margin-top: 32px;
+  text-align: center;
+}
+
 /* !!Footer!! */
 .footer {
-  background-color: #2e2f42;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-color: var(--hero-footer-bgc);
 }
 .logo-foot {
   color: var(--not-white-color);
@@ -136,7 +206,9 @@ body {
   color: var(--accent-color-add);
 }
 .footer-text {
-  color: #e7e9fc;
+  margin-bottom: 0;
+  max-width: 264px;
+  color: var(--additional-not-white-color);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -145,23 +217,30 @@ body {
 /* !!Portfolio section!! */
 /* Filter buttons */
 
-.button-filter {
+.section.portfolio {
+  padding-top: 96px;
+  background-color: var(--white-color);
+}
+/* Невидимий заголовок - Сховати по-людські! */
+.portfolio-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+}
+.portfolio .button {
+  padding: 12px 24px;
   color: var(--accent-color-add);
   background-color: var(--not-white-color);
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
 }
-.button-filter:hover,
-.button-filter:focus {
+.portfolio .button:hover,
+.portfolio .button:focus {
   background-color: var(--accent-color-add);
   color: var(--white-color);
 }
-.button-filter.current {
+.portfolio .button.current {
   background-color: var(--accent-color);
   color: var(--white-color);
+}
+.list.galery {
+  margin-top: 72px;
 }
